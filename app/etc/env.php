@@ -4,7 +4,15 @@ return [
         'frontName' => 'admin_1tiwwu'
     ],
     'remote_storage' => [
-        'driver' => 'file'
+        'driver' => 'aws-s3',
+        'config' => [
+            'bucket' => 'mediafourmagento',
+            'region' => 'us-east-1',
+            'credentials' => [
+                'key' => 'AKIA2MOZQMOC6EQYEWVE',
+                'secret' => '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'
+            ]
+        ]
     ],
     'queue' => [
         'consumers_wait_for_messages' => 1
@@ -54,7 +62,7 @@ return [
     'lock' => [
         'provider' => 'db',
         'config' => [
-            'prefix' => null
+            'prefix' => ''
         ]
     ],
     'directories' => [
